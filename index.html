@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cat vs Dog Classifier</title></head>
+<body>
+  <h2>Upload an Image to Classify</h2>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <input type="submit" value="Predict">
+  </form>
+  {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+  {% endif %}
+</body>
+</html>
